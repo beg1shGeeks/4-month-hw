@@ -1,0 +1,12 @@
+<ul>
+  {% for i in book_objects %}
+  <li>
+    <h1>{{i.title}}</h1>
+    <p>{{i.descripion}}</p>
+      {% if i.image %}
+          <img src="{{i.image.url}}" alt="" width="200" height="200">
+      {% endif %}
+    <p>{{i.created_date}}</p>
+  </li>
+  {% endfor %}
+</ul>
